@@ -1,3 +1,5 @@
+import { monstserrat } from './ui/fonts';
+import './ui/global.css';
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +7,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${monstserrat.className} antialiased`}>
+        <div>{children}</div>
+      </body>
     </html>
   );
 }
